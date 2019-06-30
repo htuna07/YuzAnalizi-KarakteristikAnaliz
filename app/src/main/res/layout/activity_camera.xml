@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.deneme.tuna.yuztanima.CameraActivity"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/yuzde_sifir"
+        app:layout_constraintBottom_toBottomOf="@id/yuzde_on"
+
+        android:background="@drawable/topbar_background"
+        android:id="@+id/topbar"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_icon"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/back_button"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/app_name"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:textSize="23sp"
+            android:fontFamily="@font/cabin"
+            android:textStyle="bold"
+            android:textColor="@color/baslik_color"
+            />
+
+
+    </RelativeLayout>
+
+    <TextureView
+        android:id="@+id/texture"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/yuzde_on"
+        app:layout_constraintBottom_toBottomOf="@id/yuzde_yuz"
+
+        />
+    <RelativeLayout
+        android:id="@+id/cerceve"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/guideline_ust"
+        app:layout_constraintBottom_toTopOf="@id/guideline_alt"
+        app:layout_constraintStart_toEndOf="@id/guideline_sol"
+        app:layout_constraintEnd_toStartOf="@id/guideline_sag"
+        android:background="@drawable/face_border"
+        >
+
+    </RelativeLayout>
+
+
+
+
+
+    <android.support.v7.widget.CardView
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_button_ust"
+
+        app:cardBackgroundColor="@color/text_background"
+        app:layout_constraintStart_toEndOf="@id/guideline_sol"
+        app:layout_constraintEnd_toStartOf="@id/guideline_sag"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        card_view:cardCornerRadius="20dp"
+
+
+         >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Fotoğraf Çek"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_gravity="center"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/text_rengi"
+            android:fontFamily="@font/cabin"
+            android:textStyle="bold"
+            android:id="@+id/btn_takepicture"
+            />
+    </android.support.v7.widget.CardView>
+
+    <RelativeLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/topbar"
+        app:layout_constraintTop_toTopOf="@id/yuzde_on"
+        app:layout_constraintStart_toStartOf="@id/guideline_sag"
+        android:layout_marginTop="10dp"
+
+        >
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/text_background"
+            card_view:cardCornerRadius="50dp"
+
+            >
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/ic_kamera_degistir"
+                android:id="@+id/kameraDegistir"
+
+                />
+
+        </android.support.v7.widget.CardView>
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/yuzde_sifir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.0"
+        />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/yuzde_on"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1"
+        />
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/yuzde_yuz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1"
+        />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_ust"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_alt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.60" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_sag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_sol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_button_ust"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_button_alt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+
+</android.support.constraint.ConstraintLayout>
