@@ -13,8 +13,8 @@
     <string name="onaylama_metni">Analiz işlemi için bu fotoğraf kullanılsın mı ?</string>
     <string name="take_picture">Fotoğraf Çek</string>
 
-    <string name="admob_uygulama_id">ca-app-pub-2909678429031804~2030433328</string>
-    <string name="admob_gecis_reklam_id">ca-app-pub-2909678429031804/6161906565</string>
+    <string name="admob_uygulama_id"></string>
+    <string name="admob_gecis_reklam_id"></string>
 
     <string-array name="cinsiyetler">
         <item>Erkek</item>
